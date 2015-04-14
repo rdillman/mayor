@@ -3,12 +3,53 @@
 <head>
   <title>Mayordillman</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+	<div class="nav">
+		<div class="container">
+			<ul class="pull-left">
+	          <li><%= link_to "Issues", pages_issues_path %></li>
+	          <li><%= link_to "About", pages_about_path %></li>
+			  <li><%= link_to "Get Involved", pages_getinvolved_path %></li>
+	        </ul>
+	        <ul class="pull-right">
+	          <li><%= link_to "Sign Up", pages_signup_path %></li>
+	          <li><%= link_to "Login", pages_login_path %></li>
+	          <li><%= link_to "Help", pages_help_path %></li>
+	        </ul>
+	      </div>
+	    </div>
+	</div>
+	
 <%= yield %>
+
+<div class="learn-more">
+  <div class="container">
+	<div class="row">
+      <div class="col-md-4">
+		<h3>Why The Dillman?</h3>
+		<p>From his humble upbringings as a badass motherfucker to his present day winning status</p>
+		<p><a href="#">See why The Dillman should be Mayor</a>
+		</p>
+      </div>
+	  <div class="col-md-4">
+		<h3>Slander</h3>
+		<p>The more bad stuff I can say about my opponent the better I look</p>
+		<p>
+		  <a href="#">Learn more about Adam</a>
+		</p>
+	  </div>
+	  <div class="col-md-4">
+		<h3>Trust and Safety</h3>
+		<p>Fuck a bunch of that!!</p>
+		<p><a href="#">Learn about not giving a fuck.</a></p>
+	  </div>
+    </div>
+  </div>
+</div>
 
 </body>
 </html>
